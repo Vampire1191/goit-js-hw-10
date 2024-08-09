@@ -3,7 +3,7 @@
 }
 
 .nav-list {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: flex-end;
   gap: 40px;
