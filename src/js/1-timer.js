@@ -36,7 +36,7 @@ const options = {
 flatpickr(dateTimePicker, options);
 
 startButton.addEventListener('click', () => {
-  startButton.disabled = true;
+  startButton.disabled = false;
   dateTimePicker.disabled = true;
   timerInterval = setInterval(updateTimer, 1000);
 });
