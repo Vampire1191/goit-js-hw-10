@@ -2,37 +2,37 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
-
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const delay = Number(form.elements.delay.value);
-
-  const state = form.elements.state.value;
-
+  const delayInput = document.querySelector("input[name='delay']");
+  const stateInput = document.querySelector("input[name='state']:checked");
+  const delay = parseInt(delayInput.value, 10);
   const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (state === 'fulfilled') {
+    if (stateInput.value === 'fulfilled') {
+      setTimeout(() => {
         resolve(delay);
-      } else {
+      }, delay);
+    } else if (stateInput.value === 'rejected') {
+      setTimeout(() => {
         reject(delay);
-      }
-    }, delay);
+      }, delay);
+    }
   });
 
   promise
-    .then(delay => {
+    .then(resolvedDelay => {
       iziToast.success({
-        title: 'Success',
-        message: `✅ Fulfilled promise in ${delay}ms`,
-        position: 'topRight',
+        title: 'OK',
+        message: `Fulfilled promise in ${resolvedDelay}ms`,
+        position: 'topCenter',
       });
     })
-    .catch(delay => {
+    .catch(rejectedDelay => {
       iziToast.error({
         title: 'Error',
-        message: `❌ Rejected promise in ${delay}ms`,
-        position: 'topRight',
+        message: `Illegal operation`,
+        position: 'topCenter',
       });
     });
 });
