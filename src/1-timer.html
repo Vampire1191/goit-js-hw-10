@@ -4,17 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/styles.css" />
+  <title>TIMER</title>
+  <link rel="stylesheet" href="./css/timer.css" />
 </head>
 <body>
-  <section>
-    <a class="home-link" href="./index.html">Home</a>
+  <div class="timer-body">
     <input type="text" id="datetime-picker" />
     <button type="button" data-start>Start</button>
+
     <div class="timer">
       <div class="field">
         <span class="value" data-days>00</span>
@@ -33,8 +30,7 @@
         <span class="label">Seconds</span>
       </div>
     </div>
-  </section>
-  <script type="module" src="./js/1-timer.js"></script>
+  </div>
+  <script src="./js/1-timer.js" type="module"></script>
 </body>
-
 </html>

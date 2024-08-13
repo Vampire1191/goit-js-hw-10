@@ -4,31 +4,30 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snackbar</title>
-  <link rel="stylesheet" href="./css/styles.css" />
+  <title>SNACKBAR</title>
+  <link rel="stylesheet" href="./css/snackbar.css" />
 </head>
 <body>
-  <section>
-    <a class="snack-home" href="./index.html">Home</a>
-    <form class="form">
-      <label class="form-label">
-        Delay (ms)
-        <input type="number" name="delay" required />
+  <a href="./index.html">BACK</a>
+  <form class="form">
+    <label>
+      Delay (ms)
+      <input type="number" name="delay" required />
+    </label>
+    <fieldset>
+      <legend>State</legend>
+      <label>
+        <input type="radio" name="state" value="fulfilled" required />
+        Fulfilled
       </label>
-      <fieldset>
-        <legend>State</legend>
-        <label class="fieldset-label">
-          <input type="radio" name="state" value="fulfilled" required />
-          Fulfilled
-        </label>
-        <label class="fieldset-label">
-          <input type="radio" name="state" value="rejected" required />
-          Rejected
-        </label>
-      </fieldset>
-      <button class="sub-butn" type="submit">Create notification</button>
-    </form>
-  </section>
-  <script type="module" src="./js/2-snackbar.js"></script>
+      <label>
+        <input type="radio" name="state" value="rejected" required />
+        Rejected
+      </label>
+    </fieldset>
+    <button type="submit">Create notification</button>
+  </form>
+  <script src="./js/2-snackbar.js" type="module"></script>
 </body>
+
 </html>
